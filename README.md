@@ -42,6 +42,6 @@ que permite visualizar:
 - Vite
 - SVG animado
 
-## 👩‍🏫 Autora
+## 👩‍🏫 Autora: Cristina Massegú Serrà
 
 Desarrollado para docencia universitaria.
