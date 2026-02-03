@@ -1,73 +1,47 @@
-# React + TypeScript + Vite
+# Simulador del circuito de recompensa y nicotina
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación interactiva para docencia que simula, de forma conceptual,  
+los efectos de la nicotina sobre el circuito de recompensa (DA / GABA / ACh / Glu),
+incluyendo desensibilización y recuperación temporal de receptores α4β2.
 
-Currently, two official plugins are available:
+## 🎯 Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Herramienta didáctica para estudiantes de neurociencia, farmacia y medicina
+que permite visualizar:
 
-## React Compiler
+- Puff único
+- Puffs repetidos
+- Abstinencia
+- Evolución temporal (timeline de 60 minutos)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧠 Qué muestra la app
 
-## Expanding the ESLint configuration
+- Circuito esquemático DA–GABA con vías directa e indirecta
+- Activación colinérgica y glutamatérgica (α7)
+- Desensibilización de receptores α4β2
+- Recuperación temporal (~45 min)
+- Timeline con:
+  - Dopamina (DA)
+  - GABA
+  - Nicotina (proxy)
+  - Desensibilización total
+  - Tics verticales = puffs individuales
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧪 Uso en clase
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Modo _Puff único_: observar pico breve y desensibilización
+- Modo _Puffs repetidos_: acumulación y elevación sostenida de DA
+- Modo _Abstinencia_: DA plana, desensibilización persistente
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+⚠️ Modelo conceptual con fines docentes. No es un modelo clínico ni cuantitativo.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Tecnologías
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React
+- TypeScript
+- Vite
+- SVG animado
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 👩‍🏫 Autora
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Desarrollado para docencia universitaria.
